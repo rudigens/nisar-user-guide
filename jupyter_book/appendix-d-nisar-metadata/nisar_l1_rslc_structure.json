@@ -1,0 +1,316 @@
+{
+  "granule": "L1_SingleLookComplex",
+  "science": {
+    "LSAR": {
+      "identification": {
+        "absoluteOrbitNumber": "Absolute orbit number",
+        "trackNumber": "Track number",
+        "frameNumber": "Frame number",
+        "missionId": "Mission identifier",
+        "processingCenter": "Data processing center",
+        "productType": "Product type",
+        "granuleId": "Unique granule identification name",
+        "productDoi": "Digital Object Identifier (DOI) for the product",
+        "productVersion": "Product version which represents the structure of the product and the science content governed by the algorithm, input data, and processing parameters",
+        "productSpecificationVersion": "Product specification version which represents the schema of this product",
+        "lookDirection": "Look direction, either \"Left\" or \"Right\"",
+        "orbitPassDirection": "Orbit direction, either \"Ascending\" or \"Descending\"",
+        "zeroDopplerStartTime": "Azimuth start time (in UTC) of the product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+        "zeroDopplerEndTime": "Azimuth stop time (in UTC) of the product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+        "plannedDatatakeId": "List of planned datatakes included in the product",
+        "plannedObservationId": "List of planned observations included in the product",
+        "isUrgentObservation": "Flag indicating if observation is nominal (\"False\") or urgent (\"True\")",
+        "listOfFrequencies": "List of frequency layers available in the product",
+        "listOfObservationModes": "List of observation modes of the input L0B granules (one mode per L0B)",
+        "diagnosticModeFlag": "Indicates if the radar operation mode is a diagnostic mode (1-2) or DBFed science (0): 0, 1, or 2",
+        "productLevel": "Product level. \"L0A\": Unprocessed instrument data; \"L0B\": Reformatted, unprocessed instrument data; \"L1\": Processed instrument data in radar coordinates system; and \"L2\": Processed instrument data in geocoded coordinates system",
+        "isGeocoded": "Flag to indicate if the product data is in the radar geometry (\"False\") or in the map geometry (\"True\")",
+        "boundingPolygon": "OGR compatible WKT representing the bounding polygon of the image. Horizontal coordinates are WGS84 longitude followed by latitude (both in degrees), and the vertical coordinate is the height above the WGS84 ellipsoid in meters. The first point corresponds to the start-time, near-range radar coordinate, and the perimeter is traversed in counterclockwise order on the map. This means the traversal order in radar coordinates differs for left-looking and right-looking sensors. The polygon includes the four corners of the radar grid, with equal numbers of points distributed evenly in radar coordinates along each edge",
+        "processingDateTime": "Processing date and time (in UTC) in the format YYYY-mm-ddTHH:MM:SS",
+        "radarBand": "Acquired frequency band, either \"L\" or \"S\"",
+        "platformName": "Name of the platform used to collect the remote sensing data provided in this product",
+        "instrumentName": "Name of the instrument used to collect the remote sensing data provided in this product",
+        "processingType": "Processing pipeline used to generate this granule. \"Nominal\": standard production system; \"Urgent\": time-sensitive processing in response to urgent response events; \"Custom\": user-initiated processing outside the nominal production system",
+        "isDithered": "\"True\" if the pulse timing was varied (dithered) during acquisition, \"False\" otherwise",
+        "isMixedMode": "\"True\" if this product is a composite of data collected in multiple radar modes, \"False\" otherwise",
+        "isFullFrame": "\"True\" if the product fully covers a NISAR frame, \"False\" if partial coverage",
+        "compositeReleaseId": "Unique version identifier of the science data production system",
+        "isJointObservation": "\"True\" if any portion of this product was acquired in a joint observation mode (e.g., L-band and S-band simultaneously), \"False\" otherwise"
+      },
+      "RSLC": {
+        "swaths": {
+          "zeroDopplerTime": "Vector of zero Doppler azimuth times measured relative to a UTC epoch",
+          "zeroDopplerTimeSpacing": "Time interval in the along-track direction for raster layers. This is same as the spacing between consecutive entries in the zeroDopplerTime array",
+          "frequencyA": {
+            "listOfPolarizations": "List of processed polarization layers with frequency A",
+            "sceneCenterAlongTrackSpacing": "Nominal along-track spacing in meters between consecutive lines near mid swath of the RSLC image",
+            "sceneCenterGroundRangeSpacing": "Nominal ground range spacing in meters between consecutive pixels near mid swath of the RSLC image",
+            "processedRangeBandwidth": "Processed range bandwidth in hertz",
+            "acquiredRangeBandwidth": "Acquisition range bandwidth in hertz. In case of mode combination, this corresponds to mode with largest bandwidth",
+            "processedAzimuthBandwidth": "Processed azimuth bandwidth in hertz",
+            "nominalAcquisitionPRF": "Nominal PRF of acquisition. In case of mode combination, this corresponds to mode with least nominal PRF",
+            "processedCenterFrequency": "Center frequency of the processed image in hertz",
+            "acquiredCenterFrequency": "Center frequency of the acquisition in hertz. In case of mode combination, this corresponds to the mode with highest center frequency",
+            "slantRangeSpacing": "Slant range spacing of grid. Same as difference between consecutive samples in slantRange array",
+            "slantRange": "Slant range dimension",
+            "HH": "Focused RSLC image (HH)",
+            "HV": "Focused RSLC image (HV)",
+            "VH": "Focused RSLC image (VH)",
+            "VV": "Focused RSLC image (VV)",
+            "RH": "Focused RSLC image (RH)",
+            "RV": "Focused RSLC image (RV)",
+            "numberOfSubSwaths": "Number of swaths of continuous imagery, due to transmit gaps",
+            "validSamplesSubSwath1": "First and last valid sample in each line of 1st subswath",
+            "validSamplesSubSwath2": "First and last valid sample in each line of 2nd subswath",
+            "validSamplesSubSwath3": "First and last valid sample in each line of 3rd subswath",
+            "validSamplesSubSwath4": "First and last valid sample in each line of 4th subswath",
+            "validSamplesSubSwath5": "First and last valid sample in each line of 5th subswath"
+          },
+          "frequencyB": {
+            "listOfPolarizations": "List of processed polarization layers with frequency B",
+            "sceneCenterAlongTrackSpacing": "Nominal along-track spacing in meters between consecutive lines near mid swath of the RSLC image",
+            "sceneCenterGroundRangeSpacing": "Nominal ground range spacing in meters between consecutive pixels near mid swath of the RSLC image",
+            "processedRangeBandwidth": "Processed range bandwidth in hertz",
+            "acquiredRangeBandwidth": "Acquisition range bandwidth in hertz. In case of mode combination, this corresponds to mode with largest bandwidth",
+            "processedAzimuthBandwidth": "Processed azimuth bandwidth in hertz",
+            "nominalAcquisitionPRF": "Nominal PRF of acquisition. In case of mode combination, this corresponds to mode with least nominal PRF",
+            "processedCenterFrequency": "Center frequency of the processed image in hertz",
+            "acquiredCenterFrequency": "Center frequency of the acquisition in hertz. In case of mode combination, this corresponds to the mode with highest center frequency",
+            "slantRangeSpacing": "Slant range spacing of grid. Same as difference between consecutive samples in slantRange array",
+            "slantRange": "Slant range dimension",
+            "HH": "Focused RSLC image (HH)",
+            "HV": "Focused RSLC image (HV)",
+            "VH": "Focused RSLC image (VH)",
+            "VV": "Focused RSLC image (VV)",
+            "RH": "Focused RSLC image (RH)",
+            "RV": "Focused RSLC image (RV)",
+            "numberOfSubSwaths": "Number of swaths of continuous imagery, due to transmit gaps",
+            "validSamplesSubSwath1": "First and last valid sample in each line of 1st subswath",
+            "validSamplesSubSwath2": "First and last valid sample in each line of 2nd subswath",
+            "validSamplesSubSwath3": "First and last valid sample in each line of 3rd subswath",
+            "validSamplesSubSwath4": "First and last valid sample in each line of 4th subswath",
+            "validSamplesSubSwath5": "First and last valid sample in each line of 5th subswath"
+          }
+        },
+        "metadata": {
+          "calibrationInformation": {
+            "geometry": {
+              "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to calibration records",
+              "slantRange": "Slant range dimension corresponding to calibration records",
+              "beta0": "2D LUT to convert DN to beta 0 assuming as a function of zero Doppler time and slant range",
+              "sigma0": "2D LUT to convert DN to sigma 0 assuming as a function of zero Doppler time and slant range",
+              "gamma0": "2D LUT to convert DN to gamma 0 as a function of zero Doppler time and slant range"
+            },
+            "frequencyA": {
+              "elevationAntennaPattern": {
+                "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to calibration elevationAntennaPattern records",
+                "slantRange": "Slant range dimension corresponding to calibration elevationAntennaPattern records",
+                "HH": "Complex two-way elevation antenna pattern",
+                "HV": "Complex two-way elevation antenna pattern",
+                "VH": "Complex two-way elevation antenna pattern",
+                "VV": "Complex two-way elevation antenna pattern",
+                "RH": "Complex two-way elevation antenna pattern",
+                "RV": "Complex two-way elevation antenna pattern"
+              },
+              "noiseEquivalentBackscatter": {
+                "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to calibration noiseEquivalentBackscatter records",
+                "slantRange": "Slant range dimension corresponding to calibration noiseEquivalentBackscatter records",
+                "HH": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "HV": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "VH": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "VV": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "RH": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "RV": "Noise equivalent backscatter in linear scale (units of DN^2)"
+              },
+              "commonDelay": "Range delay correction applied to all polarimetric channels",
+              "faradayRotation": "Faraday rotation correction applied in processing",
+              "HH": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to HH channel",
+                "differentialPhase": "Phase correction applied to HH channel",
+                "scaleFactor": "Scale factor applied to HH channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to HH channel complex amplitude with respect to elevation angle"
+              },
+              "HV": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to HV channel",
+                "differentialPhase": "Phase correction applied to HV channel",
+                "scaleFactor": "Scale factor applied to HV channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to HV channel complex amplitude with respect to elevation angle"
+              },
+              "VH": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to VH channel",
+                "differentialPhase": "Phase correction applied to VH channel",
+                "scaleFactor": "Scale factor applied to VH channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to VH channel complex amplitude with respect to elevation angle"
+              },
+              "VV": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to VV channel",
+                "differentialPhase": "Phase correction applied to VV channel",
+                "scaleFactor": "Scale factor applied to VV channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to VV channel complex amplitude with respect to elevation angle"
+              },
+              "RH": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to RH channel",
+                "differentialPhase": "Phase correction applied to RH channel",
+                "scaleFactor": "Scale factor applied to RH channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to RH channel complex amplitude with respect to elevation angle"
+              },
+              "RV": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to RV channel",
+                "differentialPhase": "Phase correction applied to RV channel",
+                "scaleFactor": "Scale factor applied to RV channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to RV channel complex amplitude with respect to elevation angle"
+              }
+            },
+            "frequencyB": {
+              "elevationAntennaPattern": {
+                "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to calibration elevationAntennaPattern records",
+                "slantRange": "Slant range dimension corresponding to calibration elevationAntennaPattern records",
+                "HH": "Complex two-way elevation antenna pattern",
+                "HV": "Complex two-way elevation antenna pattern",
+                "VH": "Complex two-way elevation antenna pattern",
+                "VV": "Complex two-way elevation antenna pattern",
+                "RH": "Complex two-way elevation antenna pattern",
+                "RV": "Complex two-way elevation antenna pattern"
+              },
+              "noiseEquivalentBackscatter": {
+                "HH": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to calibration noiseEquivalentBackscatter records",
+                "slantRange": "Slant range dimension corresponding to calibration noiseEquivalentBackscatter records",
+                "HV": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "VH": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "VV": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "RH": "Noise equivalent backscatter in linear scale (units of DN^2)",
+                "RV": "Noise equivalent backscatter in linear scale (units of DN^2)"
+              },
+              "HH": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to HH channel",
+                "differentialPhase": "Phase correction applied to HH channel",
+                "scaleFactor": "Scale factor applied to HH channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to HH channel complex amplitude with respect to elevation angle"
+              },
+              "HV": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to HV channel",
+                "differentialPhase": "Phase correction applied to HV channel",
+                "scaleFactor": "Scale factor applied to HV channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to HV channel complex amplitude with respect to elevation angle"
+              },
+              "VH": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to VH channel",
+                "differentialPhase": "Phase correction applied to VH channel",
+                "scaleFactor": "Scale factor applied to VH channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to VH channel complex amplitude with respect to elevation angle"
+              },
+              "VV": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to VV channel",
+                "differentialPhase": "Phase correction applied to VV channel",
+                "scaleFactor": "Scale factor applied to VV channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to VV channel complex amplitude with respect to elevation angle"
+              },
+              "RH": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to RH channel",
+                "differentialPhase": "Phase correction applied to RH channel",
+                "scaleFactor": "Scale factor applied to RH channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to RH channel complex amplitude with respect to elevation angle"
+              },
+              "RV": {
+                "rfiLikelihood": "Severity of radio frequency interference (RFI) contamination in the data. Value is in the interval [0,1], where 0: lowest severity, and 1: highest severity (or NaN if RFI detection was skipped)",
+                "differentialDelay": "Range delay correction applied to RV channel",
+                "differentialPhase": "Phase correction applied to RV channel",
+                "scaleFactor": "Scale factor applied to RV channel complex amplitude (at antenna boresite)",
+                "scaleFactorSlope": "Slope of scale factor applied to RV channel complex amplitude with respect to elevation angle"
+              },
+              "commonDelay": "Range delay correction applied to all polarimetric channels",
+              "faradayRotation": "Faraday rotation correction applied in processing"
+            },
+            "crosstalk": {
+              "slantRange": "Slant range dimension corresponding to crosstalk records",
+              "txHorizontalCrosspol": "Crosstalk in H-transmit channel expressed as ratio txV / txH",
+              "txVerticalCrosspol": "Crosstalk in V-transmit channel expressed as ratio txH / txV",
+              "rxHorizontalCrosspol": "Crosstalk in H-receive channel expressed as ratio rxV / rxH",
+              "rxVerticalCrosspol": "Crosstalk in V-receive channel expressed as ratio rxH / rxV"
+            }
+          },
+          "processingInformation": {
+            "parameters": {
+              "azimuthChirpWeighting": "1D array in frequency domain for azimuth processing. This is used for processing L0B to L1. FFT length=256 (assumed)",
+              "rangeChirpWeighting": "1D array in frequency domain for range processing. This is used for processing L0B to L1. FFT length=256 (assumed)",
+              "referenceTerrainHeight": "Reference terrain height as a function of time",
+              "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to processing information records",
+              "slantRange": "Slant range dimension corresponding to processing information records",
+              "frequencyA": {
+                "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to processing information records",
+                "slantRange": "Slant range dimension corresponding to processing information records",
+                "dopplerCentroid": "2D LUT of Doppler centroid for frequency A"
+              },
+              "frequencyB": {
+                "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to processing information records",
+                "slantRange": "Slant range dimension corresponding to processing information records",
+                "dopplerCentroid": "2D LUT of Doppler centroid for frequency B"
+              },
+              "runConfigurationContents": "Contents of the run configuration file with parameters used for processing"
+            },
+            "algorithms": {
+              "demInterpolation": "DEM interpolation method",
+              "rfiDetection": "Algorithm used for radio frequency interference (RFI) detection",
+              "rfiMitigation": "Algorithm used for radio frequency interference (RFI) mitigation, either \"ST-EVD\" or \"FDNF\" (or \"disabled\" if no RFI mitigation was applied)",
+              "rangeCompression": "Algorithm for focusing the data in the range direction",
+              "elevationAntennaPatternCorrection": "Algorithm for calibrating the antenna pattern",
+              "rangeSpreadingLossCorrection": "Algorithm for calibrating range fading",
+              "dopplerCentroidEstimation": "Algorithm for calculating Doppler centroid",
+              "azimuthPresumming": "Algorithm for regridding and filling gaps in the raw data in azimuth",
+              "azimuthCompression": "Algorithm for focusing the data in the azimuth direction",
+              "softwareVersion": "Software version used for processing"
+            },
+            "inputs": {
+              "l0bGranules": "List of input L0B products used",
+              "orbitFiles": "List of input orbit files used",
+              "attitudeFiles": "List of input attitude files used",
+              "auxcalFiles": "List of input calibration files used",
+              "configFiles": "List of input config files used",
+              "demSource": "Description of the input digital elevation model (DEM)"
+            }
+          },
+          "orbit": {
+            "interpMethod": "Orbit interpolation method, either \"Hermite\" or \"Legendre\"",
+            "time": "Time vector record. This record contains the time since UTC epoch corresponding to position and velocity records",
+            "position": "Position vector record. This record contains the platform position data with respect to WGS84 G1762 reference frame",
+            "velocity": "Velocity vector record. This record contains the platform velocity data with respect to WGS84 G1762 reference frame",
+            "orbitType": "Orbit product type, either \"FOE\", \"NOE\", \"MOE\", \"POE\", or \"Custom\", where \"FOE\" stands for Forecast Orbit Ephemeris, \"NOE\" is Near real-time Orbit Ephemeris, \"MOE\" is Medium precision Orbit Ephemeris, and \"POE\" is Precise Orbit Ephemeris"
+          },
+          "attitude": {
+            "time": "Time vector record. This record contains the time since UTC epoch corresponding to attitude and quaternion records",
+            "quaternions": "Attitude quaternions (q0, q1, q2, q3)",
+            "eulerAngles": "Attitude Euler angles (roll, pitch, yaw)",
+            "attitudeType": "Attitude type, either \"FRP\", \"NRP\", \"PRP, or \"Custom\", where \"FRP\" stands for Forecast Radar Pointing, \"NRP\" is Near Real-time Pointing, and \"PRP\" is Precise Radar Pointing"
+          },
+          "geolocationGrid": {
+            "epsg": "EPSG code corresponding to coordinate system used for representing geolocation grid",
+            "coordinateY": "Y coordinates in specified EPSG code",
+            "coordinateX": "X coordinates in specified EPSG code",
+            "incidenceAngle": "Incidence angle is defined as the angle between the LOS vector and the normal to the ellipsoid at the target height",
+            "losUnitVectorX": "East component of the line-of-sight (LOS) unit vector, defined from the target to the sensor, expressed in the east-north-up (ENU) coordinate system with its origin at the target location",
+            "losUnitVectorY": "North component of the line-of-sight (LOS) unit vector, defined from the target to the sensor, expressed in the east-north-up (ENU) coordinate system with its origin at the target location",
+            "alongTrackUnitVectorX": "East component of the along-track unit vector at the target location, expressed in the east-north-up (ENU) coordinate system and projected onto the horizontal plane (i.e., excluding the up component)",
+            "alongTrackUnitVectorY": "North component of the along-track unit vector at the target location, expressed in the east-north-up (ENU) coordinate system and projected onto the horizontal plane (i.e., excluding the up component)",
+            "elevationAngle": "Elevation angle is defined as the angle between the LOS vector and the normal to the ellipsoid at the sensor",
+            "slantRange": "Slant range values corresponding to the geolocation grid",
+            "zeroDopplerTime": "Vector of zero Doppler azimuth times, measured relative to a UTC epoch, corresponding to the geolocation grid",
+            "groundTrackVelocity": "Absolute value of the platform velocity scaled at the target height",
+            "heightAboveEllipsoid": "Height values above WGS84 Ellipsoid corresponding to the location grid"
+          }
+        }
+      }
+    }
+  }
+}

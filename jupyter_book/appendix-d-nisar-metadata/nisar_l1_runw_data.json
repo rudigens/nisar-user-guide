@@ -1,0 +1,397 @@
+{
+  "granule": "L1_UnwrappedInterferogram",
+  "dimension": {
+    "attitudeListLength": 19,
+    "dopplerCentroidSlantRangeWidth": 11,
+    "dopplerCentroidTimeLength": 3,
+    "geolocationCubeHeight": 19,
+    "geolocationCubeLength": 29,
+    "geolocationCubeWidth": 17,
+    "interferogramSlantRangeWidth": 13,
+    "interferogramZeroDopplerTimeLength": 17,
+    "offsetSlantRangeWidth": 3,
+    "offsetZeroDopplerTimeLength": 29,
+    "orbitListLength": 17,
+    "quaternions": 4,
+    "tripletxyz": 3,
+    "twoLayersCubeHeight": 11
+  },
+  "science": {
+    "LSAR": {
+      "RUNW": {
+        "swaths": {
+          "frequencyA": {
+            "interferogram": {
+              "slantRange": {
+                "type": "dimension",
+                "dimension": "(interferogramSlantRangeWidth)",
+                "data_type": "float64",
+                "shape": "(13)"
+              },
+              "zeroDopplerTime": {
+                "type": "dimension",
+                "dimension": "(interferogramZeroDopplerTimeLength)",
+                "data_type": "float64",
+                "shape": "(17)"
+              },
+              "mask": {
+                "type": "supplemental",
+                "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                "data_type": "float32",
+                "shape": "(17,13)"
+              },
+              "digitalElevationModel": {
+                "type": "supplemental",
+                "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                "data_type": "float32",
+                "shape": "(17,13)"
+              },
+              "HH": {
+                "unwrappedPhase": {
+                  "type": "dataset",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(17,13)"
+                },
+                "coherenceMagnitude": {
+                  "type": "supplemental",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(17,13)"
+                },
+                "connectedComponents": {
+                  "type": "supplemental",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "uint16",
+                  "shape": "(17,13)"
+                },
+                "ionospherePhaseScreen": {
+                  "type": "supplemental",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(17,13)"
+                },
+                "ionospherePhaseScreenUncertainty": {
+                  "type": "supplemental",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(17,13)"
+                }
+              },
+              "VV": {
+                "unwrappedPhase": {
+                  "type": "dataset",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(17,13)"
+                },
+                "coherenceMagnitude": {
+                  "type": "supplemental",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(17,13)"
+                },
+                "connectedComponents": {
+                  "type": "supplemental",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "uint16",
+                  "shape": "(17,13)"
+                },
+                "ionospherePhaseScreen": {
+                  "type": "supplemental",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(17,13)"
+                },
+                "ionospherePhaseScreenUncertainty": {
+                  "type": "supplemental",
+                  "dimension": "(interferogramZeroDopplerTimeLength,interferogramSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(17,13)"
+                }
+              }
+            },
+            "pixelOffsets": {
+              "mask": {
+                "type": "supplemental",
+                "dimension": "(offsetZeroDopplerTimeLength,offsetSlantRangeWidth)",
+                "data_type": "float32",
+                "shape": "(29,3)"
+              },
+              "digitalElevationModel": {
+                "type": "supplemental",
+                "dimension": "(offsetZeroDopplerTimeLength,offsetSlantRangeWidth)",
+                "data_type": "float32",
+                "shape": "(29,3)"
+              },
+              "HH": {
+                "slantRangeOffset": {
+                  "type": "supplemental",
+                  "dimension": "(offsetZeroDopplerTimeLength,offsetSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(29,3)"
+                },
+                "alongTrackOffset": {
+                  "type": "supplemental",
+                  "dimension": "(offsetZeroDopplerTimeLength,offsetSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(29,3)"
+                },
+                "correlationSurfacePeak": {
+                  "type": "supplemental",
+                  "dimension": "(offsetZeroDopplerTimeLength,offsetSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(29,3)"
+                }
+              },
+              "VV": {
+                "slantRangeOffset": {
+                  "type": "supplemental",
+                  "dimension": "(offsetZeroDopplerTimeLength,offsetSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(29,3)"
+                },
+                "alongTrackOffset": {
+                  "type": "supplemental",
+                  "dimension": "(offsetZeroDopplerTimeLength,offsetSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(29,3)"
+                },
+                "correlationSurfacePeak": {
+                  "type": "supplemental",
+                  "dimension": "(offsetZeroDopplerTimeLength,offsetSlantRangeWidth)",
+                  "data_type": "float32",
+                  "shape": "(29,3)"
+                }
+              },
+              "slantRange": {
+                "type": "dimension",
+                "dimension": "(offsetSlantRangeWidth)",
+                "data_type": "float64",
+                "shape": "(3)"
+              },
+              "zeroDopplerTime": {
+                "type": "dimension",
+                "dimension": "(offsetZeroDopplerTimeLength)",
+                "data_type": "float64",
+                "shape": "(29)"
+              }
+            }
+          }
+        },
+        "metadata": {
+          "processingInformation": {
+            "parameters": {
+              "reference": {
+                "referenceTerrainHeight": {
+                  "type": "dimension",
+                  "dimension": "(dopplerCentroidTimeLength)",
+                  "data_type": "float32",
+                  "shape": "(3)"
+                },
+                "frequencyA": {
+                  "dopplerCentroid": {
+                    "type": "supplemental",
+                    "dimension": "(dopplerCentroidTimeLength,dopplerCentroidSlantRangeWidth)",
+                    "data_type": "float64",
+                    "shape": "(3,11)"
+                  }
+                }
+              },
+              "secondary": {
+                "referenceTerrainHeight": {
+                  "type": "dimension",
+                  "dimension": "(dopplerCentroidTimeLength)",
+                  "data_type": "float32",
+                  "shape": "(3)"
+                },
+                "frequencyA": {
+                  "dopplerCentroid": {
+                    "type": "supplemental",
+                    "dimension": "(dopplerCentroidTimeLength,dopplerCentroidSlantRangeWidth)",
+                    "data_type": "float64",
+                    "shape": "(3,11)"
+                  }
+                }
+              },
+              "common": {
+                "frequencyA": {
+                  "dopplerCentroid": {
+                    "type": "supplemental",
+                    "dimension": "(dopplerCentroidTimeLength,dopplerCentroidSlantRangeWidth)",
+                    "data_type": "float64",
+                    "shape": "(3,11)"
+                  }
+                }
+              }
+            }
+          },
+          "orbit": {
+            "reference": {
+              "time": {
+                "type": "dimension",
+                "dimension": "(orbitListLength)",
+                "data_type": "float64",
+                "shape": "(17)"
+              },
+              "position": {
+                "type": "supplemental",
+                "dimension": "(orbitListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(17,3)"
+              },
+              "velocity": {
+                "type": "supplemental",
+                "dimension": "(orbitListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(17,3)"
+              }
+            },
+            "secondary": {
+              "time": {
+                "type": "dimension",
+                "dimension": "(orbitListLength)",
+                "data_type": "float64",
+                "shape": "(17)"
+              },
+              "position": {
+                "type": "supplemental",
+                "dimension": "(orbitListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(17,3)"
+              },
+              "velocity": {
+                "type": "supplemental",
+                "dimension": "(orbitListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(17,3)"
+              }
+            }
+          },
+          "attitude": {
+            "reference": {
+              "time": {
+                "type": "dimension",
+                "dimension": "(attitudeListLength)",
+                "data_type": "float64",
+                "shape": "(19)"
+              },
+              "quaternions": {
+                "type": "supplemental",
+                "dimension": "(attitudeListLength,quaternions)",
+                "data_type": "float64",
+                "shape": "(19,4)"
+              },
+              "eulerAngles": {
+                "type": "supplemental",
+                "dimension": "(attitudeListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(19,3)"
+              }
+            },
+            "secondary": {
+              "time": {
+                "type": "dimension",
+                "dimension": "(attitudeListLength)",
+                "data_type": "float64",
+                "shape": "(19)"
+              },
+              "quaternions": {
+                "type": "supplemental",
+                "dimension": "(attitudeListLength,quaternions)",
+                "data_type": "float64",
+                "shape": "(19,4)"
+              },
+              "eulerAngles": {
+                "type": "supplemental",
+                "dimension": "(attitudeListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(19,3)"
+              }
+            }
+          },
+          "geolocationGrid": {
+            "coordinateY": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float64",
+              "shape": "(19,29,17)"
+            },
+            "coordinateX": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float64",
+              "shape": "(19,29,17)"
+            },
+            "incidenceAngle": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(19,29,17)"
+            },
+            "losUnitVectorX": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(19,29,17)"
+            },
+            "losUnitVectorY": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(19,29,17)"
+            },
+            "alongTrackUnitVectorX": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(19,29,17)"
+            },
+            "alongTrackUnitVectorY": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(19,29,17)"
+            },
+            "elevationAngle": {
+              "type": "cube",
+              "dimension": "(geolocationCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(19,29,17)"
+            },
+            "parallelBaseline": {
+              "type": "cube",
+              "dimension": "(twoLayersCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(11,29,17)"
+            },
+            "perpendicularBaseline": {
+              "type": "cube",
+              "dimension": "(twoLayersCubeHeight,geolocationCubeLength,geolocationCubeWidth)",
+              "data_type": "float32",
+              "shape": "(11,29,17)"
+            },
+            "slantRange": {
+              "type": "cube dimension",
+              "dimension": "(geolocationCubeWidth)",
+              "data_type": "float64",
+              "shape": "(17)"
+            },
+            "zeroDopplerTime": {
+              "type": "cube dimension",
+              "dimension": "(geolocationCubeLength)",
+              "data_type": "float64",
+              "shape": "(29)"
+            },
+            "heightAboveEllipsoid": {
+              "type": "cube dimension",
+              "dimension": "(geolocationCubeHeight)",
+              "data_type": "float64",
+              "shape": "(19)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

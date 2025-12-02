@@ -1,0 +1,611 @@
+{
+  "granule": "L2_GeocodedPixelOffsets",
+  "dimension": {
+    "attitudeListLength": 11,
+    "dopplerCentroidLength": 19,
+    "dopplerCentroidWidth": 23,
+    "offsetLength": 19,
+    "offsetWidth": 17,
+    "orbitListLength": 3,
+    "quaternions": 4,
+    "radarCubeHeight": 5,
+    "radarCubeLength": 11,
+    "radarCubeWidth": 11,
+    "tripletxyz": 3,
+    "twoLayersCubeHeight": 23
+  },
+  "science": {
+    "LSAR": {
+      "GOFF": {
+        "grids": {
+          "frequencyA": {
+            "pixelOffsets": {
+              "mask": {
+                "type": "supplemental",
+                "dimension": "(offsetLength,offsetWidth)",
+                "data_type": "ubyte",
+                "shape": "(19,17)"
+              },
+              "xCoordinates": {
+                "type": "dimension",
+                "dimension": "(offsetWidth)",
+                "data_type": "float64",
+                "shape": "(17)"
+              },
+              "yCoordinates": {
+                "type": "dimension",
+                "dimension": "(offsetLength)",
+                "data_type": "float64",
+                "shape": "(19)"
+              },
+              "HH": {
+                "layer1": {
+                  "xCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetWidth)",
+                    "data_type": "float64",
+                    "shape": "(17)"
+                  },
+                  "yCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetLength)",
+                    "data_type": "float64",
+                    "shape": "(19)"
+                  },
+                  "alongTrackOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "correlationSurfacePeak": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "crossOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "alongTrackOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "snr": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  }
+                },
+                "layer2": {
+                  "xCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetWidth)",
+                    "data_type": "float64",
+                    "shape": "(17)"
+                  },
+                  "yCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetLength)",
+                    "data_type": "float64",
+                    "shape": "(19)"
+                  },
+                  "alongTrackOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "correlationSurfacePeak": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "crossOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "alongTrackOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "snr": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  }
+                },
+                "layer3": {
+                  "xCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetWidth)",
+                    "data_type": "float64",
+                    "shape": "(17)"
+                  },
+                  "yCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetLength)",
+                    "data_type": "float64",
+                    "shape": "(19)"
+                  },
+                  "alongTrackOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "correlationSurfacePeak": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "crossOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "alongTrackOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "snr": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  }
+                }
+              },
+              "VV": {
+                "layer1": {
+                  "xCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetWidth)",
+                    "data_type": "float64",
+                    "shape": "(17)"
+                  },
+                  "yCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetLength)",
+                    "data_type": "float64",
+                    "shape": "(19)"
+                  },
+                  "alongTrackOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "correlationSurfacePeak": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "crossOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "alongTrackOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "snr": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  }
+                },
+                "layer2": {
+                  "xCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetWidth)",
+                    "data_type": "float64",
+                    "shape": "(17)"
+                  },
+                  "yCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetLength)",
+                    "data_type": "float64",
+                    "shape": "(19)"
+                  },
+                  "alongTrackOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "correlationSurfacePeak": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "crossOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "alongTrackOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "snr": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  }
+                },
+                "layer3": {
+                  "xCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetWidth)",
+                    "data_type": "float64",
+                    "shape": "(17)"
+                  },
+                  "yCoordinates": {
+                    "type": "dimension",
+                    "dimension": "(offsetLength)",
+                    "data_type": "float64",
+                    "shape": "(19)"
+                  },
+                  "alongTrackOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffset": {
+                    "type": "dataset",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "correlationSurfacePeak": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "crossOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "slantRangeOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "alongTrackOffsetVariance": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  },
+                  "snr": {
+                    "type": "supplemental",
+                    "dimension": "(offsetLength,offsetWidth)",
+                    "data_type": "float32",
+                    "shape": "(19,17)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "metadata": {
+          "processingInformation": {
+            "parameters": {
+              "reference": {
+                "referenceTerrainHeight": {
+                  "type": "supplemental",
+                  "dimension": "(dopplerCentroidLength,dopplerCentroidWidth)",
+                  "data_type": "float32",
+                  "shape": "(19,23)"
+                },
+                "frequencyA": {
+                  "dopplerCentroid": {
+                    "type": "supplemental",
+                    "dimension": "(dopplerCentroidLength,dopplerCentroidWidth)",
+                    "data_type": "float64",
+                    "shape": "(19,23)"
+                  }
+                }
+              },
+              "secondary": {
+                "referenceTerrainHeight": {
+                  "type": "supplemental",
+                  "dimension": "(dopplerCentroidLength,dopplerCentroidWidth)",
+                  "data_type": "float32",
+                  "shape": "(19,23)"
+                },
+                "frequencyA": {
+                  "dopplerCentroid": {
+                    "type": "supplemental",
+                    "dimension": "(dopplerCentroidLength,dopplerCentroidWidth)",
+                    "data_type": "float64",
+                    "shape": "(19,23)"
+                  }
+                }
+              },
+              "common": {
+                "frequencyA": {
+                  "dopplerCentroid": {
+                    "type": "supplemental",
+                    "dimension": "(dopplerCentroidLength,dopplerCentroidWidth)",
+                    "data_type": "float64",
+                    "shape": "(19,23)"
+                  }
+                }
+              }
+            }
+          },
+          "orbit": {
+            "reference": {
+              "time": {
+                "type": "dimension",
+                "dimension": "(orbitListLength)",
+                "data_type": "float64",
+                "shape": "(3)"
+              },
+              "position": {
+                "type": "supplemental",
+                "dimension": "(orbitListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(3,3)"
+              },
+              "velocity": {
+                "type": "supplemental",
+                "dimension": "(orbitListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(3,3)"
+              }
+            },
+            "secondary": {
+              "time": {
+                "type": "dimension",
+                "dimension": "(orbitListLength)",
+                "data_type": "float64",
+                "shape": "(3)"
+              },
+              "position": {
+                "type": "supplemental",
+                "dimension": "(orbitListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(3,3)"
+              },
+              "velocity": {
+                "type": "supplemental",
+                "dimension": "(orbitListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(3,3)"
+              }
+            }
+          },
+          "attitude": {
+            "reference": {
+              "time": {
+                "type": "dimension",
+                "dimension": "(attitudeListLength)",
+                "data_type": "float64",
+                "shape": "(11)"
+              },
+              "quaternions": {
+                "type": "supplemental",
+                "dimension": "(attitudeListLength,quaternions)",
+                "data_type": "float64",
+                "shape": "(11,4)"
+              },
+              "eulerAngles": {
+                "type": "supplemental",
+                "dimension": "(attitudeListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(11,3)"
+              }
+            },
+            "secondary": {
+              "time": {
+                "type": "dimension",
+                "dimension": "(attitudeListLength)",
+                "data_type": "float64",
+                "shape": "(11)"
+              },
+              "quaternions": {
+                "type": "supplemental",
+                "dimension": "(attitudeListLength,quaternions)",
+                "data_type": "float64",
+                "shape": "(11,4)"
+              },
+              "eulerAngles": {
+                "type": "supplemental",
+                "dimension": "(attitudeListLength,tripletxyz)",
+                "data_type": "float64",
+                "shape": "(11,3)"
+              }
+            }
+          },
+          "radarGrid": {
+            "referenceSlantRange": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(5,11,11)"
+            },
+            "referenceZeroDopplerAzimuthTime": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(5,11,11)"
+            },
+            "xCoordinates": {
+              "type": "cube dimension",
+              "dimension": "(radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(11)"
+            },
+            "yCoordinates": {
+              "type": "cube dimension",
+              "dimension": "(radarCubeLength)",
+              "data_type": "float64",
+              "shape": "(11)"
+            },
+            "incidenceAngle": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(5,11,11)"
+            },
+            "losUnitVectorX": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(5,11,11)"
+            },
+            "losUnitVectorY": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(5,11,11)"
+            },
+            "alongTrackUnitVectorX": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(5,11,11)"
+            },
+            "alongTrackUnitVectorY": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(5,11,11)"
+            },
+            "elevationAngle": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float32",
+              "shape": "(5,11,11)"
+            },
+            "secondaryZeroDopplerAzimuthTime": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(5,11,11)"
+            },
+            "secondarySlantRange": {
+              "type": "cube",
+              "dimension": "(radarCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(5,11,11)"
+            },
+            "parallelBaseline": {
+              "type": "cube",
+              "dimension": "(twoLayersCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(23,11,11)"
+            },
+            "perpendicularBaseline": {
+              "type": "cube",
+              "dimension": "(twoLayersCubeHeight,radarCubeLength,radarCubeWidth)",
+              "data_type": "float64",
+              "shape": "(23,11,11)"
+            },
+            "heightAboveEllipsoid": {
+              "type": "cube dimension",
+              "dimension": "(radarCubeHeight)",
+              "data_type": "float64",
+              "shape": "(5)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

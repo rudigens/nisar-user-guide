@@ -1,0 +1,325 @@
+{
+  "granule": "L2_GeocodedPixelOffsets",
+  "science": {
+    "LSAR": {
+      "identification": {
+        "referenceAbsoluteOrbitNumber": "Absolute orbit number for the reference RSLC",
+        "secondaryAbsoluteOrbitNumber": "Absolute orbit number for the secondary RSLC",
+        "referenceIsJointObservation": "\"True\" if any portion of the reference RSLC was acquired in a joint observation mode (e.g., L-band and S-band simultaneously), \"False\" otherwise",
+        "secondaryIsJointObservation": "\"True\" if any portion of the secondary RSLC was acquired in a joint observation mode (e.g., L-band and S-band simultaneously), \"False\" otherwise",
+        "trackNumber": "Track number",
+        "frameNumber": "Frame number",
+        "missionId": "Mission identifier",
+        "processingCenter": "Data processing center",
+        "productType": "Product type",
+        "granuleId": "Unique granule identification name",
+        "productDoi": "Digital Object Identifier (DOI) for the product",
+        "productVersion": "Product version which represents the structure of the product and the science content governed by the algorithm, input data, and processing parameters",
+        "productSpecificationVersion": "Product specification version which represents the schema of this product",
+        "lookDirection": "Look direction, either \"Left\" or \"Right\"",
+        "orbitPassDirection": "Orbit direction, either \"Ascending\" or \"Descending\"",
+        "referenceZeroDopplerStartTime": "Azimuth start time (in UTC) of reference RSLC product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+        "referenceZeroDopplerEndTime": "Azimuth stop time (in UTC) of reference RSLC product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+        "secondaryZeroDopplerStartTime": "Azimuth start time (in UTC) of secondary RSLC product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+        "secondaryZeroDopplerEndTime": "Azimuth stop time (in UTC) of secondary RSLC product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+        "referencePlannedDatatakeId": "List of planned datatakes included in the reference RSLC",
+        "secondaryPlannedDatatakeId": "List of planned datatakes included in the secondary RSLC",
+        "referencePlannedObservationId": "List of planned observations included in the reference RSLC ",
+        "secondaryPlannedObservationId": "List of planned observations included in the secondary RSLC ",
+        "referenceListOfObservationModes": "List of observation modes of the L0B granules used to generate the reference RSLC (one mode per L0B)",
+        "secondaryListOfObservationModes": "List of observation modes of the L0B granules used to generate the secondary RSLC (one mode per L0B)",
+        "isUrgentObservation": "Flag indicating if observation is nominal (\"False\") or urgent (\"True\")",
+        "listOfFrequencies": "List of frequency layers available in the product",
+        "diagnosticModeFlag": "Indicates if the radar operation mode is a diagnostic mode (1-2) or DBFed science (0): 0, 1, or 2",
+        "productLevel": "Product level. \"L0A\": Unprocessed instrument data; \"L0B\": Reformatted, unprocessed instrument data; \"L1\": Processed instrument data in radar coordinates system; and \"L2\": Processed instrument data in geocoded coordinates system",
+        "isGeocoded": "Flag to indicate if the product data is in the radar geometry (\"False\") or in the map geometry (\"True\")",
+        "boundingPolygon": "OGR compatible WKT representing the bounding polygon of the image. Horizontal coordinates are WGS84 longitude followed by latitude (both in degrees), and the vertical coordinate is the height above the WGS84 ellipsoid in meters. The first point corresponds to the start-time, near-range radar coordinate, and the perimeter is traversed in counterclockwise order on the map. This means the traversal order in radar coordinates differs for left-looking and right-looking sensors. The polygon includes the four corners of the radar grid, with equal numbers of points distributed evenly in radar coordinates along each edge",
+        "processingDateTime": "Processing date and time (in UTC) in the format YYYY-mm-ddTHH:MM:SS",
+        "radarBand": "Acquired frequency band, either \"L\" or \"S\"",
+        "platformName": "Name of the platform used to collect the remote sensing data provided in this product",
+        "instrumentName": "Name of the instrument used to collect the remote sensing data provided in this product",
+        "processingType": "Processing pipeline used to generate this granule. \"Nominal\": standard production system; \"Urgent\": time-sensitive processing in response to urgent response events; \"Custom\": user-initiated processing outside the nominal production system",
+        "isDithered": "\"True\" if the pulse timing was varied (dithered) during acquisition, \"False\" otherwise",
+        "isMixedMode": "\"True\" if this product is generated from reference and secondary RSLCs with different range bandwidths, \"False\" otherwise",
+        "compositeReleaseId": "Unique version identifier of the science data production system",
+        "isFullFrame": "\"True\" if the product fully covers a NISAR frame, \"False\" if partial coverage"
+      },
+      "GOFF": {
+        "identification": {
+          "staticLayersDataAccess": "Location of the static layers product associated with this product (URL or DOI)"
+        },
+        "grids": {
+          "frequencyA": {
+            "listOfPolarizations": "List of processed polarization layers with frequency A",
+            "centerFrequency": "Center frequency of the processed image in hertz",
+            "listOfLayers": "List of pixel offset layers",
+            "pixelOffsets": {
+              "mask": "Combination of water mask and a mask of subswaths of valid samples in the reference RSLC and geometrically-coregistered secondary RSLC. Each pixel value is a three-digit number: the most significant digit represents the water flag of that pixel the reference RSLC, where 1 is water and 0 is non-water; the second digit represents the subswath number of that pixel in the reference RSLC; the least significant digit represents the subswath number of that pixel in the secondary RSLC. A value of 0 in either subswath digit indicates an invalid sample in the corresponding RSLC",
+              "projection": "Product map grid projection: EPSG code, with additional projection information as HDF5 Attributes",
+              "yCoordinateSpacing": "Nominal spacing in meters between consecutive lines",
+              "xCoordinateSpacing": "Nominal spacing in meters between consecutive pixels",
+              "HH": {
+                "layer1": {
+                  "projection": "Product map grid projection: EPSG code, with additional projection information as HDF5 Attributes",
+                  "yCoordinateSpacing": "Nominal spacing in meters between consecutive lines",
+                  "xCoordinateSpacing": "Nominal spacing in meters between consecutive pixels",
+                  "xCoordinates": "X coordinates in specified projection",
+                  "yCoordinates": "Y coordinates in specified projection",
+                  "alongTrackOffset": "Raw (unculled, unfiltered) along-track pixel offsets",
+                  "slantRangeOffset": "Raw (unculled, unfiltered) slant range pixel offsets",
+                  "correlationSurfacePeak": "Normalized correlation surface peak",
+                  "crossOffsetVariance": "Off-diagonal term of the pixel offsets covariance matrix",
+                  "slantRangeOffsetVariance": "Slant range pixel offsets variance",
+                  "alongTrackOffsetVariance": "Along-track pixel offsets variance",
+                  "snr": "Pixel offsets signal-to-noise ratio"
+                },
+                "layer2": {
+                  "projection": "Product map grid projection: EPSG code, with additional projection information as HDF5 Attributes",
+                  "yCoordinateSpacing": "Nominal spacing in meters between consecutive lines",
+                  "xCoordinateSpacing": "Nominal spacing in meters between consecutive pixels",
+                  "xCoordinates": "X coordinates in specified projection",
+                  "yCoordinates": "Y coordinates in specified projection",
+                  "alongTrackOffset": "Raw (unculled, unfiltered) along-track pixel offsets",
+                  "slantRangeOffset": "Raw (unculled, unfiltered) slant range pixel offsets",
+                  "correlationSurfacePeak": "Normalized correlation surface peak",
+                  "crossOffsetVariance": "Off-diagonal term of the pixel offsets covariance matrix",
+                  "slantRangeOffsetVariance": "Slant range pixel offsets variance",
+                  "alongTrackOffsetVariance": "Along-track pixel offsets variance",
+                  "snr": "Pixel offsets signal-to-noise ratio"
+                },
+                "layer3": {
+                  "projection": "Product map grid projection: EPSG code, with additional projection information as HDF5 Attributes",
+                  "yCoordinateSpacing": "Nominal spacing in meters between consecutive lines",
+                  "xCoordinateSpacing": "Nominal spacing in meters between consecutive pixels",
+                  "xCoordinates": "X coordinates in specified projection",
+                  "yCoordinates": "Y coordinates in specified projection",
+                  "alongTrackOffset": "Raw (unculled, unfiltered) along-track pixel offsets",
+                  "slantRangeOffset": "Raw (unculled, unfiltered) slant range pixel offsets",
+                  "correlationSurfacePeak": "Normalized correlation surface peak",
+                  "crossOffsetVariance": "Off-diagonal term of the pixel offsets covariance matrix",
+                  "slantRangeOffsetVariance": "Slant range pixel offsets variance",
+                  "alongTrackOffsetVariance": "Along-track pixel offsets variance",
+                  "snr": "Pixel offsets signal-to-noise ratio"
+                }
+              },
+              "VV": {
+                "layer1": {
+                  "projection": "Product map grid projection: EPSG code, with additional projection information as HDF5 Attributes",
+                  "yCoordinateSpacing": "Nominal spacing in meters between consecutive lines",
+                  "xCoordinateSpacing": "Nominal spacing in meters between consecutive pixels",
+                  "xCoordinates": "X coordinates in specified projection",
+                  "yCoordinates": "Y coordinates in specified projection",
+                  "alongTrackOffset": "Raw (unculled, unfiltered) along-track pixel offsets",
+                  "slantRangeOffset": "Raw (unculled, unfiltered) slant range pixel offsets",
+                  "correlationSurfacePeak": "Normalized correlation surface peak",
+                  "crossOffsetVariance": "Off-diagonal term of the pixel offsets covariance matrix",
+                  "slantRangeOffsetVariance": "Slant range pixel offsets variance",
+                  "alongTrackOffsetVariance": "Along-track pixel offsets variance",
+                  "snr": "Pixel offsets signal to noise ratio"
+                },
+                "layer2": {
+                  "projection": "Product map grid projection: EPSG code, with additional projection information as HDF5 Attributes",
+                  "yCoordinateSpacing": "Nominal spacing in meters between consecutive lines",
+                  "xCoordinateSpacing": "Nominal spacing in meters between consecutive pixels",
+                  "xCoordinates": "X coordinates in specified projection",
+                  "yCoordinates": "Y coordinates in specified projection",
+                  "alongTrackOffset": "Raw (unculled, unfiltered) along-track pixel offsets",
+                  "slantRangeOffset": "Raw (unculled, unfiltered) slant range pixel offsets",
+                  "correlationSurfacePeak": "Normalized correlation surface peak",
+                  "crossOffsetVariance": "Off-diagonal term of the pixel offsets covariance matrix",
+                  "slantRangeOffsetVariance": "Slant range pixel offsets variance",
+                  "alongTrackOffsetVariance": "Along-track pixel offsets variance",
+                  "snr": "Pixel offsets signal-to-noise ratio"
+                },
+                "layer3": {
+                  "projection": "Product map grid projection: EPSG code, with additional projection information as HDF5 Attributes",
+                  "yCoordinateSpacing": "Nominal spacing in meters between consecutive lines",
+                  "xCoordinateSpacing": "Nominal spacing in meters between consecutive pixels",
+                  "xCoordinates": "X coordinates in specified projection",
+                  "yCoordinates": "Y coordinates in specified projection",
+                  "alongTrackOffset": "Raw (unculled, unfiltered) along-track pixel offsets",
+                  "slantRangeOffset": "Raw (unculled, unfiltered) slant range pixel offsets",
+                  "correlationSurfacePeak": "Normalized correlation surface peak",
+                  "crossOffsetVariance": "Off-diagonal term of the pixel offsets covariance matrix",
+                  "slantRangeOffsetVariance": "Slant range pixel offsets variance",
+                  "alongTrackOffsetVariance": "Along-track pixel offsets variance",
+                  "snr": "Pixel offsets signal-to-noise ratio"
+                }
+              },
+              "xCoordinates": "X coordinates in specified projection",
+              "yCoordinates": "Y coordinates in specified projection"
+            }
+          }
+        },
+        "metadata": {
+          "processingInformation": {
+            "parameters": {
+              "runConfigurationContents": "Contents of the run configuration file with parameters used for processing",
+              "reference": {
+                "referenceTerrainHeight": "Reference terrain height as a function of map coordinates for reference RSLC",
+                "rfiMitigationApplied": "Flag to indicate if radio frequency interference (RFI) mitigation was applied during the generation of the reference RSLC",
+                "rfiMitigation": "Algorithm used for radio frequency interference (RFI) mitigation in the reference RSLC, either \"ST-EVD\" or \"FDNF\" (or \"disabled\" if no RFI mitigation was applied)",
+                "isMixedMode": "\"True\" if reference RSLC is a composite of data collected in multiple radar modes, \"False\" otherwise",
+                "frequencyA": {
+                  "slantRangeStart": "Slant range start distance for the reference RSLC",
+                  "numberOfRangeSamples": "Number of slant range samples for each azimuth line within the reference RSLC",
+                  "numberOfAzimuthLines": "Number of azimuth lines within the reference RSLC",
+                  "slantRangeSpacing": "Slant range spacing of reference RSLC",
+                  "zeroDopplerTimeSpacing": "Time interval in the along-track direction for reference RSLC raster layers",
+                  "zeroDopplerStartTime": "Azimuth start time (in UTC) of the reference RSLC product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+                  "zeroDopplerEndTime": "Azimuth stop time (in UTC) of the reference RSLC product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+                  "rangeBandwidth": "Processed slant range bandwidth for reference RSLC",
+                  "azimuthBandwidth": "Processed azimuth bandwidth for reference RSLC",
+                  "dopplerCentroid": "2D LUT of Doppler centroid for frequency A"
+                }
+              },
+              "secondary": {
+                "rfiMitigationApplied": "Flag to indicate if radio frequency interference (RFI) mitigation was applied during the generation of the secondary RSLC",
+                "rfiMitigation": "Algorithm used for radio frequency interference (RFI) mitigation in the secondary RSLC, either \"ST-EVD\" or \"FDNF\" (or \"disabled\" if no RFI mitigation was applied)",
+                "isMixedMode": "\"True\" if secondary RSLC is a composite of data collected in multiple radar modes, \"False\" otherwise",
+                "referenceTerrainHeight": "Reference terrain height as a function of map coordinates for secondary RSLC",
+                "frequencyA": {
+                  "dopplerCentroid": "2D LUT of Doppler centroid for frequency A",
+                  "slantRangeStart": "Slant range start distance for the secondary RSLC",
+                  "numberOfRangeSamples": "Number of slant range samples for each azimuth line within the secondary RSLC",
+                  "numberOfAzimuthLines": "Number of azimuth lines within the secondary RSLC",
+                  "slantRangeSpacing": "Slant range spacing of secondary RSLC",
+                  "zeroDopplerTimeSpacing": "Time interval in the along-track direction for secondary RSLC raster layers",
+                  "zeroDopplerStartTime": "Azimuth start time (in UTC) of the secondary RSLC product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+                  "zeroDopplerEndTime": "Azimuth stop time (in UTC) of the secondary RSLC product in the format YYYY-mm-ddTHH:MM:SS.sssssssss",
+                  "rangeBandwidth": "Processed slant range bandwidth for secondary RSLC",
+                  "azimuthBandwidth": "Processed azimuth bandwidth for secondary RSLC"
+                }
+              },
+              "common": {
+                "frequencyA": {
+                  "dopplerCentroid": "2D LUT of common Doppler centroid between reference and secondary RSLCs",
+                  "dopplerBandwidth": "Common Doppler bandwidth between reference and secondary RSLCs"
+                }
+              },
+              "pixelOffsets": {
+                "frequencyA": {
+                  "rangeBandwidth": "Processed slant range bandwidth for frequency A pixel offsets layers",
+                  "azimuthBandwidth": "Processed azimuth bandwidth for frequency A pixel offsets layers",
+                  "correlationSurfaceOversampling": "Oversampling factor of the cross-correlation surface",
+                  "margin": "Margin in pixels around reference RSLC edges excluded during cross-correlation computation",
+                  "slantRangeStartPixel": "Reference RSLC start pixel in slant range",
+                  "alongTrackStartPixel": "Reference RSLC start pixel in along-track",
+                  "slantRangeSkipWindowSize": "Slant range cross-correlation skip window size in pixels",
+                  "alongTrackSkipWindowSize": "Along-track cross-correlation skip window size in pixels",
+                  "layer1": {
+                    "alongTrackWindowSize": "Along-track cross-correlation window size in pixels",
+                    "slantRangeWindowSize": "Slant range cross-correlation window size in pixels",
+                    "alongTrackSearchWindowSize": "Along-track cross-correlation search window size in pixels",
+                    "slantRangeSearchWindowSize": "Slant range cross-correlation search window size in pixels"
+                  },
+                  "layer2": {
+                    "alongTrackWindowSize": "Along-track cross-correlation window size in pixels",
+                    "slantRangeWindowSize": "Slant range cross-correlation window size in pixels",
+                    "alongTrackSearchWindowSize": "Along-track cross-correlation search window size in pixels",
+                    "slantRangeSearchWindowSize": "Slant range cross-correlation search window size in pixels"
+                  },
+                  "layer3": {
+                    "alongTrackWindowSize": "Along-track cross-correlation window size in pixels",
+                    "slantRangeWindowSize": "Slant range cross-correlation window size in pixels",
+                    "alongTrackSearchWindowSize": "Along-track cross-correlation search window size in pixels",
+                    "slantRangeSearchWindowSize": "Slant range cross-correlation search window size in pixels"
+                  }
+                }
+              },
+              "geocoding": {
+                "rangeIonosphericCorrectionApplied": "Flag to indicate if the range ionospheric correction is applied to improve geolocation",
+                "azimuthIonosphericCorrectionApplied": "Flag to indicate if the azimuth ionospheric correction is applied to improve geolocation",
+                "hydrostaticTroposphericCorrectionApplied": "Flag to indicate if the hydrostatic tropospheric correction is applied to improve geolocation",
+                "wetTroposphericCorrectionApplied": "Flag to indicate if the wet tropospheric correction is applied to improve geolocation"
+              }
+            },
+            "algorithms": {
+              "softwareVersion": "Software version used for processing",
+              "geocoding": {
+                "complexGeocodingInterpolation": "Geocoding interpolation algorithm for complex-valued datasets",
+                "integerGeocodingInterpolation": "Geocoding interpolation algorithm for integer datasets",
+                "floatingGeocodingInterpolation": "Geocoding interpolation algorithm for floating point datasets",
+                "demInterpolation": "DEM interpolation algorithm"
+              },
+              "coregistration": {
+                "coregistrationMethod": "RSLC coregistration method",
+                "geometryCoregistration": "Geometry coregistration algorithm",
+                "resampling": "Secondary RSLC resampling algorithm"
+              },
+              "crossCorrelation": {
+                "layer1": {
+                  "crossCorrelationAlgorithm": "Cross-correlation algorithm for layer 1"
+                },
+                "layer2": {
+                  "crossCorrelationAlgorithm": "Cross-correlation algorithm for layer 2"
+                },
+                "layer3": {
+                  "crossCorrelationAlgorithm": "Cross-correlation algorithm for layer 3"
+                }
+              }
+            },
+            "inputs": {
+              "l1ReferenceSlcGranules": "List of input reference L1 RSLC products used",
+              "l1SecondarySlcGranules": "List of input secondary L1 RSLC products used",
+              "orbitFiles": "List of input orbit files used",
+              "configFiles": "List of input config files used",
+              "demSource": "Description of the input digital elevation model (DEM)",
+              "waterMaskSource": "Description of the input water mask"
+            }
+          },
+          "orbit": {
+            "temporalBaseline": "Time interval between reference and secondary RSLCs",
+            "reference": {
+              "interpMethod": "Orbit interpolation method, either \"Hermite\" or \"Legendre\"",
+              "time": "Time vector record. This record contains the time since UTC epoch corresponding to position and velocity records",
+              "position": "Position vector record. This record contains the platform position data with respect to WGS84 G1762 reference frame",
+              "velocity": "Velocity vector record. This record contains the platform velocity data with respect to WGS84 G1762 reference frame",
+              "orbitType": "Orbit product type, either \"FOE\", \"NOE\", \"MOE\", \"POE\", or \"Custom\", where \"FOE\" stands for Forecast Orbit Ephemeris, \"NOE\" is Near real-time Orbit Ephemeris, \"MOE\" is Medium precision Orbit Ephemeris, and \"POE\" is Precise Orbit Ephemeris"
+            },
+            "secondary": {
+              "interpMethod": "Orbit interpolation method, either \"Hermite\" or \"Legendre\"",
+              "time": "Time vector record. This record contains the time since UTC epoch corresponding to position and velocity records",
+              "position": "Position vector record. This record contains the platform position data with respect to WGS84 G1762 reference frame",
+              "velocity": "Velocity vector record. This record contains the platform velocity data with respect to WGS84 G1762 reference frame",
+              "orbitType": "Orbit product type, either \"FOE\", \"NOE\", \"MOE\", \"POE\", or \"Custom\", where \"FOE\" stands for Forecast Orbit Ephemeris, \"NOE\" is Near real-time Orbit Ephemeris, \"MOE\" is Medium precision Orbit Ephemeris, and \"POE\" is Precise Orbit Ephemeris"
+            }
+          },
+          "attitude": {
+            "reference": {
+              "time": "Time vector record. This record contains the time since UTC epoch corresponding to attitude and quaternion records",
+              "quaternions": "Attitude quaternions (q0, q1, q2, q3)",
+              "eulerAngles": "Attitude Euler angles (roll, pitch, yaw)",
+              "attitudeType": "Attitude type, either \"FRP\", \"NRP\", \"PRP, or \"Custom\", where \"FRP\" stands for Forecast Radar Pointing, \"NRP\" is Near Real-time Pointing, and \"PRP\" is Precise Radar Pointing"
+            },
+            "secondary": {
+              "time": "Time vector record. This record contains the time since UTC epoch corresponding to attitude and quaternion records",
+              "quaternions": "Attitude quaternions (q0, q1, q2, q3)",
+              "eulerAngles": "Attitude Euler angles (roll, pitch, yaw)",
+              "attitudeType": "Attitude type, either \"FRP\", \"NRP\", \"PRP, or \"Custom\", where \"FRP\" stands for Forecast Radar Pointing, \"NRP\" is Near Real-time Pointing, and \"PRP\" is Precise Radar Pointing"
+            }
+          },
+          "radarGrid": {
+            "referenceSlantRange": "Slant range of the reference RSLC in meters",
+            "referenceZeroDopplerAzimuthTime": "Zero Doppler azimuth time in seconds since UTC epoch of the reference RSLC image",
+            "xCoordinates": "X coordinates in specified projection",
+            "yCoordinates": "Y coordinates in specified projection",
+            "incidenceAngle": "Incidence angle is defined as the angle between the LOS vector and the normal to the ellipsoid at the target height",
+            "losUnitVectorX": "East component of the line-of-sight (LOS) unit vector, defined from the target to the sensor, expressed in the east-north-up (ENU) coordinate system with its origin at the target location",
+            "losUnitVectorY": "North component of the line-of-sight (LOS) unit vector, defined from the target to the sensor, expressed in the east-north-up (ENU) coordinate system with its origin at the target location",
+            "alongTrackUnitVectorX": "East component of the along-track unit vector at the target location, expressed in the east-north-up (ENU) coordinate system and projected onto the horizontal plane (i.e., excluding the up component)",
+            "alongTrackUnitVectorY": "North component of the along-track unit vector at the target location, expressed in the east-north-up (ENU) coordinate system and projected onto the horizontal plane (i.e., excluding the up component)",
+            "elevationAngle": "Elevation angle is defined as the angle between the LOS vector and the normal to the ellipsoid at the sensor",
+            "groundTrackVelocity": "Absolute value of the platform velocity scaled at the target height",
+            "secondaryZeroDopplerAzimuthTime": "Zero Doppler azimuth time in seconds since UTC epoch of the secondary RSLC image",
+            "secondarySlantRange": "Slant range of the secondary RSLC in meters",
+            "parallelBaseline": "Parallel component of the InSAR baseline",
+            "perpendicularBaseline": "Perpendicular component of the InSAR baseline",
+            "projection": "Product map grid projection: EPSG code, with additional projection information as HDF5 Attributes",
+            "heightAboveEllipsoid": "Height values above WGS84 Ellipsoid corresponding to the radar grid"
+          }
+        }
+      }
+    }
+  }
+}
